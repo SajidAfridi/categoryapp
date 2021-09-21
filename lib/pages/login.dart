@@ -47,6 +47,7 @@ class _LogInState extends State<LogIn> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              SizedBox(height: 10.0,),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0,horizontal: 32.0),
                 child: Column(
