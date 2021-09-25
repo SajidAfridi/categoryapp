@@ -12,6 +12,11 @@ class HomeDetailPage extends StatelessWidget {
     return SafeArea(
       bottom: false,
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: MyTheme.creamColor,
+          elevation: 0,
+        ),
+        backgroundColor: MyTheme.creamColor,
         bottomNavigationBar: Container(
           color: Colors.white,
           child: ButtonBar(
@@ -34,13 +39,13 @@ class HomeDetailPage extends StatelessWidget {
             ],
           ).p16(),
         ),
-        backgroundColor: MyTheme.creamColor,
         body: Column(
           children: [
             Hero(
               tag: Key(catalog.id.toString()),
                 child: Image.network(catalog.image)
-            ).h40(context),
+            ).h32(context),
+            SizedBox(height: 30,),
             Expanded(
                 child: VxArc(
                   height: 30.0,
@@ -53,12 +58,15 @@ class HomeDetailPage extends StatelessWidget {
                     children: [
                       catalog.name.text.xl4.bold.color(MyTheme.darkBluish).make(),
                       catalog.desc.text.xl.textStyle(context.captionStyle!).make(),
+                      10.heightBox,
+                      "This is useless text created by some random generator. jalsdjw  ef alsdfn a asfao weiflsdn a a .This shield has only been infiltrated, vision and a magical. After mashing the melons, with it in a bucket."
+                          .text.textStyle(context.captionStyle!).make().p16()
                     ],
-                    ).py64(),
+                    ).py32().p4(),
             ),
                 ))
           ],
-        ).p16(),
+        ),
       ),
     );
   }
