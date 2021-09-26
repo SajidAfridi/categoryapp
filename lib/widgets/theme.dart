@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -5,6 +6,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 class MyTheme{
   static ThemeData lightTheme(BuildContext context) => ThemeData(
+      buttonColor: darkBluish,
       primarySwatch: Colors.deepPurple,
       secondaryHeaderColor: darkBluish,
       fontFamily: GoogleFonts.poppins().fontFamily,
@@ -19,14 +21,14 @@ class MyTheme{
       brightness: Brightness.dark,
       secondaryHeaderColor: Colors.white,
       backgroundColor: DarkcreamColor,
-      cardColor: Colors.black45,
+      cardColor: Colors.black,
       canvasColor: DarkcreamColor,
       buttonColor: lightBluish,
       fontFamily: GoogleFonts.poppins().fontFamily,
       appBarTheme: AppBarTheme(
+        textTheme: Theme.of(context).textTheme.copyWith(headline6: context.textTheme.headline6!.copyWith(color: Colors.white)),
         color: Colors.black,
         elevation: 0.0,
-        textTheme: Theme.of(context).textTheme,
         iconTheme: IconThemeData(color: CupertinoColors.white),
       ));
 

@@ -17,7 +17,7 @@ class CatalogList extends StatelessWidget {
         scrollDirection: Axis.vertical,
         // shrinkWrap: true,
         itemBuilder: (context, index){
-          final catalog= CatalogModel.items[index];
+          final catalog= CatalogModel.getByPosition(index);
           return InkWell(
               child: CatalogItem(catalog: catalog),
               onTap: ()=> Navigator.push(context,MaterialPageRoute(builder: (context)=> HomeDetailPage(catalog: catalog))),
@@ -63,13 +63,13 @@ class CatalogItem extends StatelessWidget {
                         StadiumBorder(),
                       ),
                     ),
-                  )
+                  ).px4(),
                 ],
               ).p4(),
             ],
           ))
         ],
       ),
-    ).color(context.cardColor).square(170.0).make().py8();
+    ).color(context.cardColor).rounded.square(170.0).make().py8();
   }
 }
