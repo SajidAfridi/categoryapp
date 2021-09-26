@@ -18,6 +18,7 @@ class HomeDetailPage extends StatelessWidget {
         ),
         backgroundColor: MyTheme.creamColor,
         bottomNavigationBar: Container(
+          padding: EdgeInsets.fromLTRB(10, 0, 5, 0),
           color: Colors.white,
           child: ButtonBar(
             buttonPadding: EdgeInsets.zero,
@@ -26,7 +27,7 @@ class HomeDetailPage extends StatelessWidget {
               "\$${catalog.price}".text.bold.xl4.red800.make(),
               ElevatedButton(
                 onPressed: (){},
-                child: Text("Buy"),
+                child: Text("Add To Cart"),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
                     MyTheme.darkBluish,
@@ -35,7 +36,7 @@ class HomeDetailPage extends StatelessWidget {
                     StadiumBorder(),
                   ),
                 ),
-              ).wh(100, 45),
+              ).wh(120, 45),
             ],
           ).p16(),
         ),

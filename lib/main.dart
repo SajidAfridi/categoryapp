@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/pages/cart_page.dart';
 import 'package:flutter_catalog/pages/home.dart';
 import 'package:flutter_catalog/pages/login.dart';
 import 'package:flutter_catalog/util/route.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         "/": (context)=> LogIn(),
         MyRoute.homeRoute: (context)=> Home(),
        MyRoute.logInRoute: (context)=> LogIn(),
+       MyRoute.cartRoute: (context)=> CartPage(),
      },
     );
   }
