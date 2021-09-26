@@ -13,13 +13,12 @@ class HomeDetailPage extends StatelessWidget {
       bottom: false,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: MyTheme.creamColor,
+          backgroundColor: context.theme.canvasColor,
           elevation: 0,
         ),
-        backgroundColor: MyTheme.creamColor,
+        backgroundColor: context.theme.canvasColor,
         bottomNavigationBar: Container(
           padding: EdgeInsets.fromLTRB(10, 0, 5, 0),
-          color: Colors.white,
           child: ButtonBar(
             buttonPadding: EdgeInsets.zero,
             alignment: MainAxisAlignment.spaceBetween,
@@ -30,7 +29,7 @@ class HomeDetailPage extends StatelessWidget {
                 child: Text("Add To Cart"),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    MyTheme.darkBluish,
+                      context.theme.buttonColor,
                   ),
                   shape: MaterialStateProperty.all(
                     StadiumBorder(),
@@ -53,11 +52,11 @@ class HomeDetailPage extends StatelessWidget {
                   arcType: VxArcType.CONVEY,
                   edge: VxEdge.TOP,
                   child: Container(
-                  color: Colors.white,
+                  color: context.theme.cardColor,
                     width: context.screenWidth,
                     child: Column(
                     children: [
-                      catalog.name.text.xl4.bold.color(MyTheme.darkBluish).make(),
+                      catalog.name.text.xl4.bold.color(context.theme.secondaryHeaderColor).make(),
                       catalog.desc.text.xl.textStyle(context.captionStyle!).make(),
                       10.heightBox,
                       "This is useless text created by some random generator. jalsdjw  ef alsdfn a asfao weiflsdn a a .This shield has only been infiltrated, vision and a magical. After mashing the melons, with it in a bucket."

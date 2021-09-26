@@ -57,7 +57,7 @@ class CatalogItem extends StatelessWidget {
                     child: Text("Add To Cart"),
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
-                        MyTheme.darkBluish,
+                        context.theme.buttonColor,
                       ),
                       shape: MaterialStateProperty.all(
                         StadiumBorder(),
@@ -70,6 +70,6 @@ class CatalogItem extends StatelessWidget {
           ))
         ],
       ),
-    ).white.square(200.0).make().py8();
+    ).color(context.cardColor).square(170.0).make().py8();
   }
 }
