@@ -1,6 +1,10 @@
 import 'package:flutter_catalog/models/catalog.dart';
 
-class ClassModel{
+class CartModel{
+
+  static final cartModel = CartModel._internal();
+  CartModel._internal();
+  factory CartModel() => cartModel;
 
   late CatalogModel _catalog;
 
@@ -26,4 +30,5 @@ class ClassModel{
   void remover(Item item){
     _itemIds.remove(item.id);
   }
+
 }

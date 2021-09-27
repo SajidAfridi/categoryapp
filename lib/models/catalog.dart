@@ -1,4 +1,9 @@
 class CatalogModel {
+
+  static final catModel = CatalogModel._internal();
+  CatalogModel._internal();
+  factory CatalogModel() => catModel;
+
       static List<Item> items= [Item(
       id: 1,
       name: "Iphone 12 Pro",
@@ -12,6 +17,7 @@ class CatalogModel {
       Item getByid(int id)=>items.firstWhere((element) => element.id == id, orElse: null);
       Item getByPosition(int pos)=>items[pos];
 }
+
 class Item{
   final int id;
   final String name;
