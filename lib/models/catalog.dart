@@ -9,8 +9,8 @@ class CatalogModel {
       "https://images.unsplash.com/photo-1611791485440-24e8239a0377?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aXBob25lJTIwMTIlMjBwcm98ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
       ),
       ];
-      static Item getByid(int id)=>items.firstWhere((element) => element.id == id, orElse: null);
-      static Item getByPosition(int pos)=>items[pos];
+      Item getByid(int id)=>items.firstWhere((element) => element.id == id, orElse: null);
+      Item getByPosition(int pos)=>items[pos];
 }
 class Item{
   final int id;
