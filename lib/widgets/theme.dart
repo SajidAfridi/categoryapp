@@ -7,26 +7,29 @@ import 'package:velocity_x/velocity_x.dart';
 class MyTheme{
   static ThemeData lightTheme(BuildContext context) => ThemeData(
       buttonColor: darkBluish,
+      cardColor: creamColor,
       primarySwatch: Colors.deepPurple,
       secondaryHeaderColor: darkBluish,
       fontFamily: GoogleFonts.poppins().fontFamily,
       appBarTheme: AppBarTheme(
-      color: Colors.white,
-      elevation: 0.0,
-      textTheme: Theme.of(context).textTheme,
+        textTheme: Theme.of(context).textTheme.copyWith(headline6: context
+            .textTheme.headline6!.copyWith(color: Colors.black)),
+        color: Colors.white,
+        elevation: 0.0,
       iconTheme: IconThemeData(color: CupertinoColors.black),
       ));
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
       brightness: Brightness.dark,
       secondaryHeaderColor: Colors.white,
-      backgroundColor: DarkcreamColor,
+      backgroundColor: darkCream,
       cardColor: Colors.black,
-      canvasColor: DarkcreamColor,
+      canvasColor: darkCream,
       buttonColor: lightBluish,
       fontFamily: GoogleFonts.poppins().fontFamily,
       appBarTheme: AppBarTheme(
-        textTheme: Theme.of(context).textTheme.copyWith(headline6: context.textTheme.headline6!.copyWith(color: Colors.white)),
+        textTheme: Theme.of(context).textTheme.copyWith(headline6: context
+            .textTheme.headline6!.copyWith(color: Colors.white)),
         color: Colors.black,
         elevation: 0.0,
         iconTheme: IconThemeData(color: CupertinoColors.white),
@@ -34,7 +37,7 @@ class MyTheme{
 
   static Color creamColor = Color(0xfff5f5f5);
   static Color darkBluish = Color(0xff403b58);
-  static Color DarkcreamColor = Vx.gray900;
+  static Color darkCream = Vx.gray900;
   static Color lightBluish = Vx.indigo500;
 
 }
