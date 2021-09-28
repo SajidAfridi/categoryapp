@@ -5,7 +5,7 @@ import 'package:flutter_catalog/pages/home_details.dart';
 import 'package:flutter_catalog/widgets/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-import 'addtocart.dart';
+import 'AddToCart.dart';
 import 'catalog_image.dart';
 
 class CatalogList extends StatelessWidget {
@@ -54,7 +54,8 @@ class CatalogItem extends StatelessWidget {
                 alignment: MainAxisAlignment.spaceBetween,
                 children: [
                   "\$${catalog.price}".text.bold.xl.make(),
-                  AddToCart(catalog: catalog),                ],
+                  AddToCart(catalog: catalog),
+                ],
               ).p4(),
             ],
           ))

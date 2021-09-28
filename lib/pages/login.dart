@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/util/route.dart';
-import 'package:velocity_x/src/extensions/context_ext.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({Key? key}) : super(key: key);
@@ -87,7 +87,7 @@ class _LogInState extends State<LogIn> {
                     SizedBox(height: 40.0,),
 
                     Material(
-                      color: context.theme.buttonColor,
+                      color: context.theme.primaryColor,
                       borderRadius: BorderRadius.circular(changeButton? 50:8),
                       child: InkWell(
                         onTap: ()=> moveToHome(context),
