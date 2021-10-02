@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_catalog/models/cart.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/pages/home_details.dart';
 import 'package:flutter_catalog/widgets/theme.dart';
@@ -12,21 +11,17 @@ class CatalogList extends StatelessWidget {
   const CatalogList({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final _cart= CartModel();
-    return Flexible(
-      child: ListView.builder(
-        scrollDirection: Axis.vertical,
-        // shrinkWrap: true,
-        itemBuilder: (context, index){
-          final catalog= CatalogModel.items[index];
-          return InkWell(
-              child: CatalogItem(catalog: catalog),
-              onTap: ()=> Navigator.push(context,MaterialPageRoute
-                (builder: (context)=> HomeDetailPage(catalog: catalog))),
-          );
-        },
-        itemCount: CatalogModel.items.length,
-      ),
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: CatalogModel.items.length,
+      itemBuilder: (context, index){
+        final catalog= CatalogModel.items[index];
+        return InkWell(
+            child: CatalogItem(catalog: catalog),
+            onTap: ()=> Navigator.push(context,MaterialPageRoute
+              (builder: (context)=> HomeDetailPage(catalog: catalog))),
+        );
+      },
     );
   }
 }
